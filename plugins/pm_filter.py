@@ -708,7 +708,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help1":
         buttons = [[
-            InlineKeyboardButton('⚙️ Fᴜɴᴄᴛɪᴏɴ ⚙️', callback_data='help1')
+            InlineKeyboardButton('⚙️ Fᴜɴᴄᴛɪᴏɴ ⚙️', callback_data='help2')
             ],[                       
             InlineKeyboardButton('⭗ Fɪʟᴛᴇʀs ⭗', callback_data='admin'),
             InlineKeyboardButton('⭗ Hᴏᴡ Tᴏ Usᴇ Mᴇ ⭗', callback_data='howtoues')
@@ -725,7 +725,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )      
-    elif query.data == "help":
+    elif query.data == "help2":
         buttons = [[                               
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ​', callback_data='tele'),
             InlineKeyboardButton('sʜᴀʀᴇ-ᴛᴇxᴛ​', callback_data='sharetxt'),
@@ -739,8 +739,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ꜰᴏɴᴛ​', callback_data='fond'),
             InlineKeyboardButton('ᴄᴀʀʙᴏɴ​', callback_data='carb')
             ],[
-            InlineKeyboardButton('◁ʙᴀᴄᴋ', callback_data='help2'),
-            InlineKeyboardButton(' ɴᴇxᴛ▷', callback_data='help3')
+            InlineKeyboardButton('ᴘᴀsᴛᴇ', callback_data='pastes'),
+            InlineKeyboardButton('ᴜʀʟ_sʜᴏʀᴛ', callback_data='urlshort'),
+            InlineKeyboardButton('ᴘɪɴɢ', callback_data='pings')
+            ],[
+            InlineKeyboardButton('❮', callback_data='help1'),
+            InlineKeyboardButton('🏡 Hᴏᴍᴇ', callback_data='start')
+            InlineKeyboardButton('❯', callback_data='help3')
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.message.edit_text(                     
@@ -750,17 +755,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )      
     elif query.data == "help3":
         buttons = [[
-            InlineKeyboardButton('ᴘᴀsᴛᴇ', callback_data='pastes'),
-            InlineKeyboardButton('ᴜʀʟ_sʜᴏʀᴛ', callback_data='urlshort'),
-            InlineKeyboardButton('ᴘɪɴɢ', callback_data='pings')
-            ],[
             InlineKeyboardButton('𝙼𝚄𝚃𝙴', callback_data='restric'),
-            InlineKeyboardButton('ᴋɪᴄᴋ', callback_data='zombies'),
-            InlineKeyboardButton('ᴘɪɴ', callback_data='pin')
+            InlineKeyboardButton('ᴋɪᴄᴋ', callback_data='zombies')
             ],[
-            InlineKeyboardButton('◁ʙᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('ᴅᴇᴘʟᴏʏ', callback_data='suneesh'),
-            InlineKeyboardButton(' ᴄʟᴏsᴇ ✗', callback_data='close_data')
+            InlineKeyboardButton('ᴘɪɴ', callback_data='pin'),
+            InlineKeyboardButton('◁ʙᴀᴄᴋ', callback_data='suneesh')
+            ],[
+            InlineKeyboardButton('❮', callback_data='help2'),
+            InlineKeyboardButton('Cʟᴏsᴇ 🔐', callback_data='close_data')
+            ],[
+            InlineKeyboardButton('Go To Home', callback_data='start')
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.message.edit_text(                     
