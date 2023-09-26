@@ -943,7 +943,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "supports":
-        buttons = [[
+            btn = [[
                     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/+vP8QdSOL8BpjM2E1"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Mallu_Movie_Hub_Group")
                     ],[
@@ -959,7 +959,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "dev":
-        buttons = [[
+            btn = [[
                     InlineKeyboardButton("◁ʙᴀᴄᴋ", callback_data="start")
                   ]]
             reply_markup = InlineKeyboardMarkup(btn)
