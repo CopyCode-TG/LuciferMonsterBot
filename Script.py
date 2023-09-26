@@ -366,3 +366,6 @@ How to add me in your group?
 🚦 Aʟʟ Lᴀɴɢᴜᴀɢᴇs Mᴏᴠɪᴇs & Sᴇʀɪᴇs.
 🗣️ Bᴏᴛ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ.
 📢 Bᴏᴛ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ.</b>"""
+    DEV = """<b>●Fɪʀsᴛ Nᴀᴍᴇ : CᴏᴘʏCᴏᴅᴇ™🇮🇳
+●UsᴇʀNᴀᴍᴇ : @TG_x_filter
+●Usᴇʀ Lɪɴᴋ : <a href=https://t.me/TG_x_filter>Cʟɪᴄᴋ Hᴇʀᴇ</a></b>"""
