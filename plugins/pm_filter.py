@@ -689,7 +689,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚡️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ⚡️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🤵 Oᴡɴᴇʀ', callback_data='source'),
+            
             InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ 🎭', callback_data='supports')
         ], [
             InlineKeyboardButton('🔎 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
@@ -774,9 +774,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('✇ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/+jBeBIf8RHqw4MzQ9'),
-            InlineKeyboardButton('Sᴛᴀᴛᴜꜱ', callback_data='stats'),
-            InlineKeyboardButton('⌬ sᴜᴘᴘᴏʀᴛ ', url='https://t.me/MalluBlasters')
+            InlineKeyboardButton('Dᴇᴠᴇʟᴏᴘᴇʀ', callback_data='dev'),
+            InlineKeyboardButton('Sᴏᴜʀᴄᴇ', callback_data='source')
+            ],[
+            InlineKeyboardButton('🧩 Fɪʟᴇs Sᴛᴀᴛᴇs 🧩', callback_data='stats')
             ],[
             InlineKeyboardButton('⟲ ʜᴏᴍᴇ ', callback_data='start'),
             InlineKeyboardButton(' ᴄʟᴏsᴇ ✗', callback_data='close_data')
@@ -942,7 +943,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "supports":
-            btn = [[
+        buttons = [[
                     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/+vP8QdSOL8BpjM2E1"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Mallu_Movie_Hub_Group")
                     ],[
@@ -957,6 +958,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "dev":
+        buttons = [[
+                    InlineKeyboardButton("◁ʙᴀᴄᴋ", callback_data="start")
+                  ]]
+            reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=(script.DEV),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "urlshort":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help3')
@@ -964,7 +975,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.URLSHORT_TXT,
-            disable_web_page_preview=True,
+            disable_web_page_prevDEV=True,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
