@@ -369,3 +369,4 @@ How to add me in your group?
     DEV = """<b>●Fɪʀsᴛ Nᴀᴍᴇ : CᴏᴘʏCᴏᴅᴇ™🇮🇳
 ●UsᴇʀNᴀᴍᴇ : @TG_x_filter
 ●Usᴇʀ Lɪɴᴋ : <a href=https://t.me/TG_x_filter>Cʟɪᴄᴋ Hᴇʀᴇ</a></b>"""
+    FILTERS_TXT = """<b>Hey Threr Are My Three Types Of Filters</b>
