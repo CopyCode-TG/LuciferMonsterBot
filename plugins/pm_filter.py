@@ -688,12 +688,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":   
         buttons = [[
-            InlineKeyboardButton('⚡️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ⚡️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            
-            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ 🎭', callback_data='supports')
+            InlineKeyboardButton('✨️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🔎 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ 🎭', callback_data='supports')
+        ], [
             InlineKeyboardButton('Uᴘᴅᴀᴛᴇs 🔔', url='https://t.me/copycod_Official')
         ], [
             InlineKeyboardButton('🤠 Aʙᴏᴜᴛ', callback_data='about'),
@@ -711,7 +710,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚙️ Fᴜɴᴄᴛɪᴏɴ ⚙️', callback_data='help2')
             ],[                       
-            InlineKeyboardButton('⭗ Fɪʟᴛᴇʀs ⭗', callback_data='admin'),
+            InlineKeyboardButton('⭗ Fɪʟᴛᴇʀs ⭗', callback_data='filters'),
             InlineKeyboardButton('⭗ Hᴏᴡ Tᴏ Usᴇ Mᴇ ⭗', callback_data='howtoues')
             ],[
             InlineKeyboardButton('⭗ Cᴏɴɴᴇᴄᴛɪᴏɴs ⭗', callback_data='coct'),
@@ -832,7 +831,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )      
+        )
+    elif query.data == "filters":
+        buttons = [[
+            InlineKeyboardButton(' Mᴜ-Fɪʟᴛᴇʀ', callback_data='manuelfilter'),
+            InlineKeyboardButton('Aᴜ-Fɪʟᴛᴇʀ', callback_data='autofilter')
+            ],[
+            InlineKeyboardButton('Gʟᴏʙᴀʟ-Fɪʟᴛᴇʀ', callback_data='gfill'),
+            InlineKeyboardButton('Back', callback_data='help1')
+        ]]
+        feply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FILTERS_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        ) 
     elif query.data == "zombies":
         buttons = [[
             InlineKeyboardButton('◁ʙᴀᴄᴋ', callback_data='help3')
@@ -1077,10 +1091,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton(' Mᴜ-Fɪʟᴛᴇʀ', callback_data='manuelfilter'),
-            InlineKeyboardButton('Aᴜ-Fɪʟᴛᴇʀ', callback_data='autofilter')
-            ],[
-            InlineKeyboardButton('Gʟᴏʙᴀʟ-Fɪʟᴛᴇʀ', callback_data='gfill'),
             InlineKeyboardButton('Usᴇʀ & Cʜᴀᴛ', callback_data='uschat')
             ],[
             InlineKeyboardButton('◁ʙᴀᴄᴋ', callback_data='extra')
