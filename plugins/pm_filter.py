@@ -1678,7 +1678,7 @@ async def pm_spoll_choker(msg):
         return
     PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={query}')])                   
+    btn.append([InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url='https://google.com/search?q={query}')])                   
     k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
 
@@ -1731,7 +1731,7 @@ async def advantage_spell_chok(msg):
             callback_data=f"spolling#{user}#{k}",
         )
     ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={query}')]]                     
+    btn.append([InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url='https://google.com/search?q={query}')]]                     
     k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
 async def manual_filters(client, message, text=False):
