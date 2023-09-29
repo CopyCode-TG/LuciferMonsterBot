@@ -596,15 +596,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton('💥 ɢʀᴏᴜᴘ', url="https://t.me/+vP8QdSOL8BpjM2E1"),
-                  InlineKeyboardButton('💌 ᴄʜᴀɴɴᴇʟ', url="https://t.me/CinemaShopLinkz")
-               ],[
-                  InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
+                  InlineKeyboardButton('💥 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                  InlineKeyboardButton('💌 Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇs', url="https://t.me/cinema_flix_updates")
                  ]
                 ]
-            ),
+           )
+       )
                       
-        )
+    
     elif query.data == "bright":
         await bright(client, query.message)
     elif query.data == "mix":
