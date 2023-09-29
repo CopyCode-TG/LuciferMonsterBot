@@ -1677,9 +1677,9 @@ async def pm_spoll_choker(msg):
         await k.delete()
         return
     PM_SPELL_CHECK[msg.id] = movielist
-    btn = [InlineKeyboardButton(🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={query}')]
-    await msg.reply("Hello Bro",                     
-    reply_markup=InlineKeyboardMarkup(btn))
+    btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
+    one_button = InlineKeyboardButton([[InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={query}')])                     
+    k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
 
 async def advantage_spell_chok(msg):
@@ -1731,9 +1731,8 @@ async def advantage_spell_chok(msg):
             callback_data=f"spolling#{user}#{k}",
         )
     ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="ᴄʟᴏsᴇ ✗", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
-                    reply_markup=InlineKeyboardMarkup(btn))
+    one_button = InlineKeyboardButton([[InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={query}')])                     
+    k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
