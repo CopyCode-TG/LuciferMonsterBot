@@ -22,8 +22,8 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('✇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaShopLinkz'),
-            InlineKeyboardButton('✇ ɢʀᴏᴜᴘ', url='https://t.me/+vP8QdSOL8BpjM2E1')
+            InlineKeyboardButton('📢 Bᴏᴛ Uᴘᴅᴀᴛᴇs', url='https://t.me/copycod_Official'),
+            InlineKeyboardButton('Bᴏᴛ Sᴜᴘᴘᴏʀᴛ 👥', url='https://t.me/+JBgW1T1ZsUYyNTg1')
             ],[
             InlineKeyboardButton('〄 ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
@@ -241,10 +241,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                  [
-                  InlineKeyboardButton('💥 ɢʀᴏᴜᴘ', url="https://t.me/+vP8QdSOL8BpjM2E1"),
-                  InlineKeyboardButton('💌 ᴄʜᴀɴɴᴇʟ', url="https://t.me/CinemaShopLinkz")
-               ],[
-                  InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
+                   InlineKeyboardButton('💥 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                  InlineKeyboardButton('Mᴏᴠɪᴇ Uᴘᴅᴀᴛᴇs 💌', url="https://t.me/cinema_flix_updates")
                  ]
                 ]
             )
