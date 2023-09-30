@@ -1672,15 +1672,14 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply_Photo(
-        photo=SPELL_IMG,
+        k = await msg.reply_Photo(photo=SPELL_IMG, caption="Hello Bro" reply_markup = one_button)
         await asyncio.sleep(8)
         await k.delete()
         return
     PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f"https://google.com/search?q={query}")                   
-    k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
+    k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup = one_button)
 
 
 async def advantage_spell_chok(msg):
