@@ -1672,7 +1672,7 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply_Photo(photo=SPELL_IMG, caption="Hello Bro")
+        k = await msg.reply_Photo(photo=SPELL_IMG,caption="Hello Bro")
         await asyncio.sleep(8)
         await k.delete()
         return
