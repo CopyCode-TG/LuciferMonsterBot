@@ -1643,7 +1643,7 @@ async def pm_spoll_choker(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-       k = await msg.reply_Photo(Photo="https://telegra.ph/file/9eb2cbd95c4b216c79bc6.jpg", caption="<b>Hey Bro please check your movie name</b>")
+        k = await msg.reply_Photo(Photo="https://telegra.ph/file/9eb2cbd95c4b216c79bc6.jpg", caption="<b>Hey Bro please check your movie name</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
