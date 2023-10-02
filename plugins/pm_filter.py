@@ -1643,7 +1643,7 @@ async def pm_spoll_choker(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply_Photo(Photo=SPELL_IMG, caption="Hello Bro", reply_markup = one_button)
+       k = await msg.reply_Photo(Photo=SPELL_IMG, caption="<b>Hey Bro please check your movie name</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -1672,14 +1672,15 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply_Photo(photo=SPELL_IMG, caption="Hello Bro", reply_markup = one_button)
+        k = await msg.reply_Photo(Photo=SPELL_IMG,caption="<b>Hey Bro please check your movie name</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
     PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f"https://google.com/search?q={query}")                   
-    k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro")
+    btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
+    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔎𝗚𝗢𝗢𝗚𝗟𝗘🔍", url=f"https://www.google.com/search?q={reqst_gle}")]])
+    k = await msg.reply_Photo(Photo=SPELL_IMG, caption="<b>Hey Bro please check your movie name</b>", reply_markup = one_button)
 
 
 async def advantage_spell_chok(msg):
@@ -1691,7 +1692,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro")
+        k = await msg.reply_Photo(Photo=SPELL_IMG, caption="<b>Hey Bro please check your movie name</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -1720,8 +1721,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f"https://google.com/search?q={query}")
-        k = await msg.reply_Photo(Photo=Photo=SPELL_IMG,caption=f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. Kɪɴᴅʟʏ ᴜsᴇ ɪɴʟɪɴᴇ sᴇᴀʀᴄʜ ᴏʀ ᴍᴀᴋᴇ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ᴛᴏ ɢᴇᴛ ᴍᴏᴠɪᴇ ғɪʟᴇs. Tʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...</b>", reply_markup = one_button)
+        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔎𝗚𝗢𝗢𝗚𝗟𝗘🔍", url=f"https://www.google.com/search?q={reqst_gle}")]])
+        k = await msg.reply_Photo(Photo=SPELL_IMG, caption="<b>Hey Bro please check your movie name</b>", reply_markup = one_button)
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -1732,8 +1733,9 @@ async def advantage_spell_chok(msg):
             callback_data=f"spolling#{user}#{k}",
         )
     ] for k, movie in enumerate(movielist)]
-    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f"https://google.com/search?q={query}")
-    k = await msg.reply_Photo(Photo=SPELL_IMG,caption="Hello Bro", reply_markup = one_button)
+    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
+    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🔎𝗚𝗢𝗢𝗚𝗟𝗘🔍", url=f"https://www.google.com/search?q={reqst_gle}")]])
+    k = await msg.reply_Photo(Photo=SPELL_IMG, caption="<b>Hey Bro please check your movie name</b>", reply_markup = one_button)
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
@@ -1782,9 +1784,9 @@ async def manual_filters(client, message, text=False):
                 break
     else:
         return False
+        
 
-
-async def global_filters(client, message, text=False):
+ def global_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
     reply_id = message.reply_to_message.id if message.reply_to_message else message.id
@@ -1852,7 +1854,4 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
-
-
-
-
+                           
