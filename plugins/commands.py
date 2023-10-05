@@ -22,10 +22,10 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('📢 Bᴏᴛ Uᴘᴅᴀᴛᴇs', url='https://t.me/copycod_Official'),
-            InlineKeyboardButton('Bᴏᴛ Sᴜᴘᴘᴏʀᴛ 👥', url='https://t.me/+JBgW1T1ZsUYyNTg1')
+            InlineKeyboardButton('📢 𝐁ᴏᴛ 𝐔ᴘᴅᴀᴛᴇs', url='https://t.me/copycod_Official'),
+            InlineKeyboardButton('𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ 👥', url='https://t.me/+JBgW1T1ZsUYyNTg1')
             ],[
-            InlineKeyboardButton('⚡️ Cʜᴇᴄᴋ Bᴏᴛ Pᴍ ⚡️', url=f"https://t.me/{temp.U_NAME}?start=help")
+            InlineKeyboardButton('⚜️ 𝐂ʜᴇᴄᴋ 𝐁ᴏᴛ 𝐏ᴍ ⚜️', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
@@ -62,7 +62,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "✇ ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ✇", url=invite_link.invite_link
+                    "✇ 𝐉ᴏɪɴ 𝐌ᴏᴠɪᴇ 𝐔ᴘᴅᴀᴛᴇs ✇", url=invite_link.invite_link
                 )
             ]
         ]
@@ -71,9 +71,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" ᴛʀʏ ᴀɢᴀɪɴ ♽", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" ↺𝐓ʀʏ 𝐀ɢᴀɪɴ↺", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" ᴛʀʏ ᴀɢᴀɪɴ ♽", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" ↺𝐓ʀʏ 𝐀ɢᴀɪɴ↺", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text=FORCE_SUB_TEXT,
@@ -241,8 +241,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                  [
-                   InlineKeyboardButton('🎥 Gʀᴏᴜᴘ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
-                  InlineKeyboardButton('Cʜᴀɴɴᴇʟ 🎬', url="https://t.me/cinema_flix_updates")
+                   InlineKeyboardButton('🎥 𝐆ʀᴏᴜᴘ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                  InlineKeyboardButton('𝐂ʜᴀɴɴᴇʟ 🎬', url="https://t.me/cinema_flix_updates")
                  ]
                 ]
             )
