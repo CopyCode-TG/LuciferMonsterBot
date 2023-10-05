@@ -214,15 +214,15 @@ async def next_page(bot, query):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f"🗂 Fɪʟᴇs: {len(btn)}", callback_data="files"),
-            InlineKeyboardButton(f'Rᴜʟᴇs 📋', 'minfo'),
-            InlineKeyboardButton(f'Bᴏᴛ Iɴғᴏ📍', 'info')
+            InlineKeyboardButton(f"🗂 𝐅ɪʟᴇs: {len(btn)}", callback_data="files"),
+            InlineKeyboardButton(f'𝐑ᴜʟᴇs 📋', 'minfo'),
+            InlineKeyboardButton(f'𝐁ᴏᴛ 𝐈ɴғᴏ 🚸', 'info')
             
         ]
     )
     btn.insert(1,
         [
-            InlineKeyboardButton(f'💠 {search} 💠', 'dupe')
+            InlineKeyboardButton(f'🔮 {search} 🔮', 'dupe')
         ]
     )    
 
@@ -961,11 +961,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "supports":
             btn = [[
-                    InlineKeyboardButton("𝐌ᴏᴠɪᴇ 𝐆ʀᴏᴜᴘ", url="https://t.me/+vP8QdSOL8BpjM2E1"),
-                    InlineKeyboardButton("𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ", url="https://t.me/Mallu_Movie_Hub_Group")
+                    InlineKeyboardButton("𝐌ᴏᴠɪᴇ 𝐆ʀᴏᴜᴘ", url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                    InlineKeyboardButton("𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ", url="https://t.me/+JBgW1T1ZsUYyNTg1")
                     ],[
-                    InlineKeyboardButton("𝐌ᴏᴠɪᴇ 𝐔ᴘᴅᴀᴛᴇs", url="https://t.me/Mr_KD_BOTZZ"),
-                    InlineKeyboardButton("𝐁ᴏᴛ 𝐔ᴘᴅᴀᴛᴇs", url="https://t.me/CinemaShopLinkz")
+                    InlineKeyboardButton("𝐌ᴏᴠɪᴇ 𝐔ᴘᴅᴀᴛᴇs", url="https://t.me/cinema_flix_updates"),
+                    InlineKeyboardButton("𝐁ᴏᴛ 𝐔ᴘᴅᴀᴛᴇs", url="https://t.me/copycod_Official")
                     ],[
                     InlineKeyboardButton("⤆𝐁ᴀᴄᴋ", callback_data="start")
                   ]]
@@ -1049,8 +1049,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "suneesh":
         buttons = [[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Mr_KD_BOTZZ'),
-            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/MalluBlasters')
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/copycod_Official'),
+            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/TG_x_filter')
             ],[
             InlineKeyboardButton('⤆𝐁ᴀᴄᴋ', callback_data='help1')
         ]]
@@ -1457,15 +1457,15 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton(f"🗂 Fɪʟᴇs: {len(btn)}", callback_data="files"),
-            InlineKeyboardButton(f'Rᴜʟᴇs 📋', 'minfo'),
-            InlineKeyboardButton(f'Bᴏᴛ Iɴғᴏ📍', 'info')
+            InlineKeyboardButton(f"🗂 𝐅ɪʟᴇs: {len(btn)}", callback_data="files"),
+            InlineKeyboardButton(f'𝐑ᴜʟᴇs 📋', 'minfo'),
+            InlineKeyboardButton(f'𝐁ᴏᴛ 𝐈ɴғᴏ 🚸', 'info')
             
         ]
     )
     btn.insert(1,
         [
-            InlineKeyboardButton(f'💠 {search} 💠', 'dupe')
+            InlineKeyboardButton(f'🔮 {search} 🔮', 'dupe')
         ]
     )
     if offset != "":
